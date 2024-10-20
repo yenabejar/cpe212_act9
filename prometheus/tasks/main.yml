@@ -14,11 +14,11 @@
    copy: no
    validate_certs: false
 
-#- name: create user prometheus
-#  shell: useradd --no-create-home --shell /bin/false node_exporter
+- name: create user prometheus
+  shell: useradd --no-create-home --shell /bin/false node_exporter
   
-#- name: create user node_exporter
-#  shell: useradd --no-create-home --shell /bin/false node_exporter
+- name: create user node_exporter
+  shell: useradd --no-create-home --shell /bin/false node_exporter
 
 - name: add node exporter init service
   copy:
