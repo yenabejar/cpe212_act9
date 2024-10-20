@@ -1,0 +1,22 @@
+---
+# handlers file for prometheus
+ - name: enable node exporter
+   systemd:
+     name: node_exporter.service
+     state: started
+     daemon_reload: yes
+     enabled: yes
+
+ - name: enable prometheus service on boot
+   systemd:
+     name: prometheus.service
+     state: started
+     daemon_reload: yes
+     enabled: yes
+
+ - name: enable alertmanager service on boot
+   systemd:
+     name: alertmanager.service
+     state: started
+     daemon_reload: yes
+     enabled: yes

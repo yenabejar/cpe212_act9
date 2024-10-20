@@ -1,0 +1,10 @@
+[Unit]
+Description=Prometheus Node Exporter Service
+After=network.target
+[Service]
+User=danielle
+Group=danielle
+Type=simple
+ExecStart=/usr/local/bin/danielle
+[Install]
+WantedBy=multi-user.target
